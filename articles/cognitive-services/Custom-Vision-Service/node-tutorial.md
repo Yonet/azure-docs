@@ -22,6 +22,14 @@ This article provides information and sample code to help you get started using 
 - [Node.js 8](https://www.nodejs.org/en/download/) or later installed.
 - [npm](https://www.npmjs.com/) installed.
 
+[!INCLUDE [get-keys](includes/get-keys.md)]
+
+[!INCLUDE [node-get-images](includes/node-get-images.md)]
+
+## Add the code
+
+Create a new file called *sample.js* in your preferred project directory.
+
 ## Install the Custom Vision SDK
 
 To install the Custom Vision service SDK for Node.js, run the following command in PowerShell:
@@ -31,17 +39,9 @@ npm install @azure/cognitiveservices-customvision-training
 npm install @azure/cognitiveservices-customvision-prediction
 ```
 
-[!INCLUDE [get-keys](includes/get-keys.md)]
-
-[!INCLUDE [node-get-images](includes/node-get-images.md)]
-
-## Add the code
-
-Create a new file called *sample.js* in your preferred project directory.
-
 ### Create the Custom Vision service project
 
-Add the following code to your script to create a new Custom Vision service project. Insert your subscription keys in the appropriate definitions.
+Add the following code to your script to create a new Custom Vision service project. Insert your subscription keys in the appropriate definitions and set the sampleDataRoot path value to your image folder path. Make sure the endPoint value matches the training and prediction endpoints you have created at [Customvision.ai](https://www.customvision.ai/).
 
 ```javascript
 const util = require('util');
